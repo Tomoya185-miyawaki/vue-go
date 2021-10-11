@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  client:
+    build: ./client
+    ports:
+      - 80:80
+    volumes:
+      - ./client:/app
+    command: npm run serve
+
+  server:
+    build: ./server
+    ports:
+      - 81:81
+    volumes:
+      - ./server:/api
