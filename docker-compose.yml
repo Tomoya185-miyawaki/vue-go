@@ -20,7 +20,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: shopping
+      MYSQL_DATABASE: vue_go
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       TZ: 'Asia/Tokyo'
