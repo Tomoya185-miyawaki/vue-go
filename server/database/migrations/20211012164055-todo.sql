@@ -1,0 +1,14 @@
+
+-- +migrate Up
+CREATE TABLE IF NOT EXISTS todo (
+    id bigint AUTO_INCREMENT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    memo TEXT,
+    status TINYINT(1) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+-- +migrate Down
+DROP TABLE IF EXISTS todo;
