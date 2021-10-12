@@ -12,7 +12,7 @@ import (
 func main() {
 	router := gin.Default()
 	v1 := router.Group("/v1")
-	v1.GET("/products", controller.FetchAllProducts)
+	v1.GET("/todos", controller.FetchAllTodos)
 
 	err := router.Run(":81")
 	if err != nil {
