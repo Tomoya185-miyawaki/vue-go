@@ -1,1 +1,4 @@
 db/
+server/tmp/
+server/config/.env
+server/config/local.env
