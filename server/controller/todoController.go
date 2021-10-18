@@ -2,14 +2,13 @@ package controller
 
 import (
 	"net/http"
-	"server/model"
+	"server/service"
 
 	"github.com/gin-gonic/gin"
 )
 
-func FetchAllTodos(c *gin.Context) {
-	todos := model.FindAllTodos()
+func FetchAll(c *gin.Context) {
+	todos := service.FindAllTodos()
 
-	// URLへのアクセスに対してJSONを返す
 	c.JSON(http.StatusOK, todos)
 }
